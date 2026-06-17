@@ -10,7 +10,6 @@ Description   : Locale-aware IT service focus page for the Alvestrasza Corporati
 
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Link } from '@/i18n/navigation';
 
 type Props = {
   params: Promise<{ locale: string }>;
