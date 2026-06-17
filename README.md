@@ -1,11 +1,11 @@
 <!--
 File Name     : README.md
-Version       : v0.1.0
+Version       : v0.1.1
 Created       : 2026-06-17
 Last Modified : 2026-06-17
 Author        : Nouramon Alvestrasza
 Organization  : Alvestrasza Corporation
-Description   : Project overview and deployment notes for the public A-Corp website.
+Description   : Project overview and deployment notes for the public cinematic A-Corp website.
 -->
 
 # A-Corp Website
@@ -14,9 +14,9 @@ Public website for Alvestrasza Corporation.
 
 ## Pages
 
-- `/` – Start page
+- `/` – Cinematic start page with corporate hero design
 - `/contact` – Company and mail operations contact page
-- `/it-service` – Initial IT Service focus page
+- `/it-service` – Initial IT Service / Solutions focus page
 
 ## Corporate Design
 
@@ -62,6 +62,22 @@ npm run start
 
 ```text
 /opt/sites/acorp-website/app
+```
+
+## Design Notes
+
+The homepage design has been updated to a cinematic dark-space visual language inspired by the supplied mockup: fixed top navigation, serif wordmark, central emblem, planet/citadel style hero composition, crimson accents and four-pillar section.
+
+A transparent emblem variant is generated from the supplied logo for header and hero placement:
+
+```text
+public/assets/alvestrasza-emblem-transparent.png
+```
+
+The original logo remains available at:
+
+```text
+public/assets/alvestrasza-logo.png
 ```
 
 ## Notes

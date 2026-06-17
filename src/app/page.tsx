@@ -1,48 +1,59 @@
 /*
 File Name     : page.tsx
-Version       : v0.1.0
+Version       : v0.1.1
 Created       : 2026-06-17
 Last Modified : 2026-06-17
 Author        : Nouramon Alvestrasza
 Organization  : Alvestrasza Corporation
-Description   : Public homepage for the Alvestrasza Corporation website.
+Description   : Cinematic public homepage for the Alvestrasza Corporation website.
 */
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { serviceAreas, siteConfig } from '@/lib/site';
+import { pillars, serviceAreas, siteConfig } from '@/lib/site';
 
 export default function HomePage() {
   return (
     <main>
-      <section className="hero">
-        <div className="container hero-grid">
-          <div>
-            <div className="eyebrow">Public presence initializing</div>
-            <h1>Secure IT services for resilient operations.</h1>
-            <p className="lead">
-              {siteConfig.company} is building a service platform for professional IT operations,
-              secure infrastructure, documentation, identity services and technical education.
-            </p>
-            <div className="actions">
-              <Link className="button button-primary" href="/it-service">Explore IT Service</Link>
-              <Link className="button button-secondary" href="/contact">Contact Operations</Link>
-            </div>
+      <section className="hero-cinematic">
+        <div className="hero-content">
+          <Image src="/assets/alvestrasza-emblem-transparent.png" alt="Alvestrasza Corporation emblem" width={180} height={180} className="hero-emblem" priority />
+          <h1>Diplomatic Precision.<br />Enduring Purpose.</h1>
+          <span className="red-rule" aria-hidden="true" />
+          <p>{siteConfig.mission}</p>
+          <Link className="mission-button" href="/it-service">
+            Explore our mission
+            <span aria-hidden="true">›</span>
+          </Link>
+        </div>
+      </section>
+
+      <section className="pillars-section" aria-labelledby="pillars-title">
+        <div className="container">
+          <div className="center-section-head">
+            <h2 id="pillars-title">Our Pillars</h2>
+            <span className="red-rule" aria-hidden="true" />
           </div>
-          <div className="logo-panel" aria-hidden="true">
-            <Image src="/assets/alvestrasza-logo.png" alt="" width={720} height={720} priority />
+          <div className="pillar-grid">
+            {pillars.map((pillar) => (
+              <article className="pillar-card" key={pillar.title}>
+                <div className="pillar-icon" aria-hidden="true">{pillar.icon}</div>
+                <h3>{pillar.title}</h3>
+                <p>{pillar.description}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-compact" id="initiatives">
         <div className="container">
           <div className="section-head">
             <div className="eyebrow">Current focus</div>
-            <h2>Foundation first. Services next.</h2>
+            <h2>Secure IT services prepared with operational discipline.</h2>
             <p>
-              The public website is intentionally compact during the initial company setup phase. The first
-              operational focus area is IT Service, with further service descriptions and legal details to follow.
+              The first public service focus is IT Service. Additional solution pages, legal details, and deeper
+              technical descriptions will follow as the company structure is finalized.
             </p>
           </div>
           <div className="card-grid">
@@ -52,6 +63,27 @@ export default function HomePage() {
                 <p>Designed for traceable, maintainable and security-conscious service delivery.</p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-compact" id="insights">
+        <div className="container split">
+          <div className="card glass-card">
+            <div className="eyebrow">Insights</div>
+            <h2>Documentation first.</h2>
+            <p>
+              Operational clarity is part of the design: configuration, responsibilities and verification paths
+              are prepared as first-class service artifacts.
+            </p>
+          </div>
+          <div className="card glass-card" id="careers">
+            <div className="eyebrow">Careers</div>
+            <h2>Future opportunities.</h2>
+            <p>
+              The organization is still being established. Public career information will be published after the
+              legal and operational structure is finalized.
+            </p>
           </div>
         </div>
       </section>

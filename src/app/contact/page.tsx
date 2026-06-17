@@ -1,6 +1,6 @@
 /*
 File Name     : page.tsx
-Version       : v0.1.0
+Version       : v0.1.1
 Created       : 2026-06-17
 Last Modified : 2026-06-17
 Author        : Nouramon Alvestrasza
@@ -19,21 +19,20 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main>
-      <section className="section">
-        <div className="container split">
-          <div>
-            <div className="eyebrow">Contact</div>
-            <h1>Responsible contact information.</h1>
-            <p className="lead">
-              This page provides public contact information for {siteConfig.company}, including the person
-              responsible for e-mail operations under {siteConfig.mailHost}.
-            </p>
-            <div className="notice">
-              <p>{siteConfig.statusNote}</p>
-            </div>
-          </div>
+      <section className="subpage-hero">
+        <div className="container narrow">
+          <div className="eyebrow">Contact</div>
+          <h1>Responsible contact information.</h1>
+          <p className="lead">
+            Public contact information for {siteConfig.company}, including the person responsible for e-mail
+            operations under {siteConfig.mailHost}.
+          </p>
+        </div>
+      </section>
 
-          <div className="card">
+      <section className="section section-compact">
+        <div className="container split">
+          <div className="card glass-card">
             <h2>Company</h2>
             <div className="info-list">
               <div className="info-row"><span className="info-label">Organization</span><span className="info-value">{siteConfig.company}</span></div>
@@ -41,13 +40,12 @@ export default function ContactPage() {
               <div className="info-row"><span className="info-label">Role</span><span className="info-value">{siteConfig.role}</span></div>
               <div className="info-row"><span className="info-label">Website</span><span className="info-value"><a href={siteConfig.url}>{siteConfig.url}</a></span></div>
             </div>
+            <div className="notice">
+              <p>{siteConfig.statusNote}</p>
+            </div>
           </div>
-        </div>
-      </section>
 
-      <section className="section">
-        <div className="container split">
-          <div className="card">
+          <div className="card glass-card">
             <h2>E-Mail Operations</h2>
             <div className="info-list">
               <div className="info-row"><span className="info-label">Mail hostname</span><span className="info-value">{siteConfig.mailHost}</span></div>
@@ -58,9 +56,14 @@ export default function ContactPage() {
               <div className="info-row"><span className="info-label">Hostmaster</span><span className="info-value"><a href={`mailto:${siteConfig.hostmaster}`}>{siteConfig.hostmaster}</a></span></div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="card">
-            <h2>Operational Statement</h2>
+      <section className="section section-compact">
+        <div className="container">
+          <div className="card statement-card">
+            <div className="eyebrow">Operational Statement</div>
+            <h2>Legitimate business and transactional e-mail only.</h2>
             <p>
               The mail system is intended for legitimate business communication, transactional service e-mails,
               account verification, notifications and administrative communication. The system is not operated as
