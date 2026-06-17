@@ -7,16 +7,15 @@ Author        : Nouramon Alvestrasza
 Organization  : Alvestrasza Corporation
 Description   : Central public site metadata, navigation, service pillars and contact information.
 */
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://alvestrasza.com';
 
 export const siteConfig = {
   company: 'Alvestrasza Corporation',
   tagline: 'Diplomatic precision. Enduring purpose.',
   mission: 'Alvestrasza Corporation advances resilient cooperation through secure systems, strategic insight, and sovereign technology.',
   domain: 'alvestrasza.com',
-  url: 'https://alvestrasza.com',
+  url: siteUrl,
   mailHost: 'mail.alvestrasza.com',
-  mailIPv4: '146.0.34.242',
-  mailIPv6: '2001:4ba0:92c1:e9::2',
   responsiblePerson: 'Nouramon Alvestrasza',
   role: 'Chief Executive Officer',
   postmaster: 'postmaster@alvestrasza.com',
@@ -64,4 +63,10 @@ export const serviceAreas = [
   'Secure application hosting',
   'Documentation and operational runbooks',
   'Technical education and enablement'
+];
+
+export const sitePages = [
+  '',
+  '/contact',
+  '/it-service'
 ];

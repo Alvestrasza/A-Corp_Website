@@ -9,10 +9,10 @@ Description   : Sitemap endpoint for the public A-Corp website.
 */
 
 import type { MetadataRoute } from 'next';
-import { siteConfig } from '@/lib/site';
+import { siteConfig, sitePages } from '@/lib/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return ['', '/contact', '/it-service'].map((path) => ({
+  return sitePages.map((path) => ({
     url: `${siteConfig.url}${path}`,
     lastModified: new Date('2026-06-17')
   }));

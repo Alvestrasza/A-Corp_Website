@@ -49,8 +49,6 @@ export default function ContactPage() {
             <h2>E-Mail Operations</h2>
             <div className="info-list">
               <div className="info-row"><span className="info-label">Mail hostname</span><span className="info-value">{siteConfig.mailHost}</span></div>
-              <div className="info-row"><span className="info-label">IPv4</span><span className="info-value">{siteConfig.mailIPv4}</span></div>
-              <div className="info-row"><span className="info-label">IPv6</span><span className="info-value">{siteConfig.mailIPv6}</span></div>
               <div className="info-row"><span className="info-label">Postmaster</span><span className="info-value"><a href={`mailto:${siteConfig.postmaster}`}>{siteConfig.postmaster}</a></span></div>
               <div className="info-row"><span className="info-label">Abuse contact</span><span className="info-value"><a href={`mailto:${siteConfig.abuse}`}>{siteConfig.abuse}</a></span></div>
               <div className="info-row"><span className="info-label">Hostmaster</span><span className="info-value"><a href={`mailto:${siteConfig.hostmaster}`}>{siteConfig.hostmaster}</a></span></div>
@@ -68,6 +66,10 @@ export default function ContactPage() {
               The mail system is intended for legitimate business communication, transactional service e-mails,
               account verification, notifications and administrative communication. The system is not operated as
               an open relay and is maintained by Alvestrasza Corporation.
+            </p>
+            <p>
+              The responsible mail hostname is published as <strong>{siteConfig.mailHost}</strong>. Mail routing,
+              sender authorization and reverse DNS information are maintained through public DNS records.
             </p>
             <p>
               Newsletter or bulk mail will only be sent after explicit recipient opt-in. Purchased, harvested or
