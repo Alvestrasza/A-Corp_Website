@@ -1,0 +1,117 @@
+{
+  "Metadata": {
+    "title": "Alvestrasza Corporation",
+    "description": "Alvestrasza Corporation provides IT services and prepares structured technical education."
+  },
+  "Layout": {
+    "homeAriaLabel": "Alvestrasza Corporation home",
+    "logoAlt": "Alvestrasza Corporation logo",
+    "mainNavigation": "Main navigation",
+    "languageSwitch": "Language selection",
+    "postmaster": "Postmaster",
+    "nav": {
+      "overview": "Overview",
+      "itService": "IT Service",
+      "focus": "Focus",
+      "documentation": "Documentation",
+      "contact": "Contact"
+    }
+  },
+  "HomePage": {
+    "hero": {
+      "emblemAlt": "Alvestrasza Corporation emblem",
+      "mission": "Alvestrasza Corporation provides IT services and prepares structured technical education for secure, maintainable infrastructure.",
+      "cta": "View IT Service"
+    },
+    "pillarsTitle": "Our Focus Areas",
+    "pillars": {
+      "itServices": {
+        "title": "IT Service",
+        "description": "Support for secure, maintainable and clearly documented infrastructure."
+      },
+      "academy": {
+        "title": "Academy",
+        "description": "Structured courses and workshops are being prepared and will later be provided through an LMS."
+      },
+      "documentation": {
+        "title": "Documentation",
+        "description": "Technical decisions, responsibilities and operational paths are documented clearly."
+      },
+      "operations": {
+        "title": "Operations",
+        "description": "Focused on stable systems, clear responsibilities and realistic operating models."
+      }
+    },
+    "focus": {
+      "eyebrow": "Current Focus",
+      "title": "IT services with clear documentation and reliable implementation.",
+      "text": "The current public focus is IT service, technical consulting and the preparation of an Academy structure for courses and workshops.",
+      "cardText": "Prepared for traceable, maintainable and security-conscious implementation."
+    },
+    "serviceAreas": {
+      "infrastructure": "Infrastructure operations",
+      "identity": "Identity and access management",
+      "mailDnsCertificates": "Mail, DNS and certificate services"
+    },
+    "documentation": {
+      "eyebrow": "Documentation",
+      "title": "Documentation first.",
+      "text": "Operational clarity is part of the design: configuration, responsibilities and verification paths are treated as core parts of technical services."
+    },
+    "academy": {
+      "eyebrow": "Academy",
+      "title": "Courses and workshops in preparation.",
+      "text": "The Academy is being prepared. Participants should later be able to attend structured courses and workshops through an LMS."
+    }
+  },
+  "ContactPage": {
+    "metadata": {
+      "title": "Contact",
+      "description": "Contact information for Alvestrasza Corporation and mail operations."
+    },
+    "eyebrow": "Contact",
+    "title": "Responsible contact information.",
+    "lead": "Public contact information for Alvestrasza Corporation, including responsible mail operations.",
+    "company": {
+      "title": "Company",
+      "organization": "Organization",
+      "responsiblePerson": "Responsible person",
+      "role": "Role",
+      "website": "Website",
+      "statusNote": "The company is currently in the process of being formally established. A full postal business address will be published once finalized."
+    },
+    "mail": {
+      "title": "Mail Operations",
+      "hostname": "Mail hostname",
+      "postmaster": "Postmaster",
+      "abuse": "Abuse contact",
+      "hostmaster": "Hostmaster"
+    },
+    "statement": {
+      "eyebrow": "Operational Statement",
+      "title": "Legitimate business and transactional e-mail only.",
+      "text1": "The mail system is intended for legitimate business communication, transactional service e-mails, account verification, notifications and administrative communication.",
+      "text2": "The system is not operated as an open relay. Mail routing, sender authorization and reverse DNS information are maintained through public DNS records.",
+      "text3": "Newsletter or bulk mail will only be sent after explicit recipient opt-in. Purchased, harvested or third-party address lists are not used."
+    }
+  },
+  "ItServicePage": {
+    "metadata": {
+      "title": "IT Service",
+      "description": "IT service offering of Alvestrasza Corporation."
+    },
+    "eyebrow": "IT Service",
+    "title": "IT Service",
+    "lead": "A service area for reliable infrastructure operations, secure identity integration, technical documentation and operational enablement.",
+    "cta": "Contact us",
+    "cardText": "Service details are being prepared and will be published as the operating model matures.",
+    "areas": {
+      "infrastructure": "Infrastructure operations",
+      "identity": "Identity and access management",
+      "mailDnsCertificates": "Mail, DNS and certificate services",
+      "hosting": "Secure application hosting",
+      "documentation": "Documentation and operational runbooks",
+      "education": "Technical courses and workshops"
+    }
+  }
+}

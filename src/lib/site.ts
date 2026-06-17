@@ -11,8 +11,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://alvestrasza.com';
 
 export const siteConfig = {
   company: 'Alvestrasza Corporation',
-  tagline: 'Diplomatic precision. Enduring purpose.',
-  mission: 'Alvestrasza Corporation advances resilient cooperation through secure systems, strategic insight, and sovereign technology.',
+  tagline: 'IT services for secure infrastructure.',
+  mission: 'Alvestrasza Corporation provides IT services for secure, maintainable and well-documented infrastructure.',
   domain: 'alvestrasza.com',
   url: siteUrl,
   mailHost: 'mail.alvestrasza.com',

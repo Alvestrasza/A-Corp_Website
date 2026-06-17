@@ -1,0 +1,117 @@
+{
+  "Metadata": {
+    "title": "Alvestrasza Corporation",
+    "description": "Alvestrasza Corporation bietet IT-Services und bereitet strukturierte technische Weiterbildung vor."
+  },
+  "Layout": {
+    "homeAriaLabel": "Alvestrasza Corporation Startseite",
+    "logoAlt": "Logo der Alvestrasza Corporation",
+    "mainNavigation": "Hauptnavigation",
+    "languageSwitch": "Sprachauswahl",
+    "postmaster": "Postmaster",
+    "nav": {
+      "overview": "Übersicht",
+      "itService": "IT-Service",
+      "focus": "Schwerpunkte",
+      "documentation": "Dokumentation",
+      "contact": "Kontakt"
+    }
+  },
+  "HomePage": {
+    "hero": {
+      "emblemAlt": "Emblem der Alvestrasza Corporation",
+      "mission": "Alvestrasza Corporation bietet IT-Services und bereitet strukturierte technische Weiterbildung für sichere, wartbare Infrastruktur vor.",
+      "cta": "IT-Service ansehen"
+    },
+    "pillarsTitle": "Unsere Schwerpunkte",
+    "pillars": {
+      "itServices": {
+        "title": "IT-Service",
+        "description": "Unterstützung für sichere, wartbare und nachvollziehbar dokumentierte Infrastruktur."
+      },
+      "academy": {
+        "title": "Academy",
+        "description": "Strukturierte Kurse und Workshops werden vorbereitet und später über ein LMS bereitgestellt."
+      },
+      "documentation": {
+        "title": "Dokumentation",
+        "description": "Technische Entscheidungen, Zuständigkeiten und Betriebswege werden nachvollziehbar dokumentiert."
+      },
+      "operations": {
+        "title": "Betrieb",
+        "description": "Fokus auf stabile Systeme, klare Verantwortlichkeiten und realistische Betriebsmodelle."
+      }
+    },
+    "focus": {
+      "eyebrow": "Aktueller Fokus",
+      "title": "IT-Services mit klarer Dokumentation und betriebssicherer Umsetzung.",
+      "text": "Der aktuelle öffentliche Schwerpunkt liegt auf IT-Service, technischer Beratung und dem Aufbau einer Academy-Struktur für Kurse und Workshops.",
+      "cardText": "Vorbereitet für nachvollziehbare, wartbare und sicherheitsbewusste Umsetzung."
+    },
+    "serviceAreas": {
+      "infrastructure": "Infrastrukturbetrieb",
+      "identity": "Identity und Access Management",
+      "mailDnsCertificates": "Mail, DNS und Zertifikatsdienste"
+    },
+    "documentation": {
+      "eyebrow": "Dokumentation",
+      "title": "Dokumentation zuerst.",
+      "text": "Betriebliche Klarheit ist Teil des Designs: Konfiguration, Zuständigkeiten und Prüfwege werden als zentrale Bestandteile technischer Services behandelt."
+    },
+    "academy": {
+      "eyebrow": "Academy",
+      "title": "Kurse und Workshops im Aufbau.",
+      "text": "Die Academy wird vorbereitet. Teilnehmer sollen später über ein LMS an strukturierten Kursen und Workshops teilnehmen können."
+    }
+  },
+  "ContactPage": {
+    "metadata": {
+      "title": "Kontakt",
+      "description": "Kontaktinformationen der Alvestrasza Corporation und Angaben zum Mailbetrieb."
+    },
+    "eyebrow": "Kontakt",
+    "title": "Verantwortliche Kontaktinformationen.",
+    "lead": "Öffentliche Kontaktinformationen der Alvestrasza Corporation, einschließlich Angaben zum verantwortlichen Mailbetrieb.",
+    "company": {
+      "title": "Unternehmen",
+      "organization": "Organisation",
+      "responsiblePerson": "Verantwortliche Person",
+      "role": "Rolle",
+      "website": "Website",
+      "statusNote": "Das Unternehmen befindet sich derzeit im formalen Aufbau. Eine vollständige postalische Geschäftsadresse wird veröffentlicht, sobald sie final feststeht."
+    },
+    "mail": {
+      "title": "Mailbetrieb",
+      "hostname": "Mail-Hostname",
+      "postmaster": "Postmaster",
+      "abuse": "Abuse-Kontakt",
+      "hostmaster": "Hostmaster"
+    },
+    "statement": {
+      "eyebrow": "Betriebserklärung",
+      "title": "Legitime geschäftliche und transaktionale E-Mails.",
+      "text1": "Das Mailsystem ist für legitime geschäftliche Kommunikation, transaktionale Service-E-Mails, Account-Verifizierung, Benachrichtigungen und administrative Kommunikation vorgesehen.",
+      "text2": "Das System wird nicht als offenes Relay betrieben. Mailrouting, Senderautorisierung und Reverse-DNS-Informationen werden über öffentliche DNS-Einträge gepflegt.",
+      "text3": "Newsletter oder Massenmails werden nur nach ausdrücklichem Opt-in des Empfängers versendet. Gekaufte, gesammelte oder fremde Adresslisten werden nicht verwendet."
+    }
+  },
+  "ItServicePage": {
+    "metadata": {
+      "title": "IT-Service",
+      "description": "IT-Service-Angebot der Alvestrasza Corporation."
+    },
+    "eyebrow": "IT-Service",
+    "title": "IT-Service",
+    "lead": "Ein Servicebereich für zuverlässigen Infrastrukturbetrieb, sichere Identity-Integration, technische Dokumentation und operative Befähigung.",
+    "cta": "Kontakt aufnehmen",
+    "cardText": "Servicedetails werden vorbereitet und veröffentlicht, sobald das Betriebsmodell weiter ausgereift ist.",
+    "areas": {
+      "infrastructure": "Infrastrukturbetrieb",
+      "identity": "Identity und Access Management",
+      "mailDnsCertificates": "Mail, DNS und Zertifikatsdienste",
+      "hosting": "Sicheres Anwendungshosting",
+      "documentation": "Dokumentation und Betriebsanleitungen",
+      "education": "Technische Kurse und Workshops"
+    }
+  }
+}

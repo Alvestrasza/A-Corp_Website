@@ -1,6 +1,6 @@
 /*
 File Name     : robots.ts
-Version       : v0.1.0
+Version       : v0.1.1
 Created       : 2026-06-17
 Last Modified : 2026-06-17
 Author        : Nouramon Alvestrasza
@@ -9,11 +9,12 @@ Description   : Robots metadata endpoint for the public A-Corp website.
 */
 
 import type { MetadataRoute } from 'next';
-import { siteConfig } from '@/lib/site';
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://alvestrasza.com';
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [{ userAgent: '*', allow: '/' }],
-    sitemap: `${siteConfig.url}/sitemap.xml`
+    sitemap: `${siteUrl}/sitemap.xml`
   };
 }
