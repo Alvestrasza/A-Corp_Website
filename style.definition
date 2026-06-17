@@ -1,0 +1,14 @@
+{
+    "colors":{
+        "deepspace": "#071018",
+        "void": "#04090e",
+        "panel_blue": "#0b1721",
+        "text_white": "#f1f4f5",
+        "silver": "#c5cdd0",
+        "crimson": "#d4483e"
+    },
+    "fonts": {
+        "headline": "Trajanor (Serif)",
+        "body": "Inter (Sans-Serfi)"
+    }
+}

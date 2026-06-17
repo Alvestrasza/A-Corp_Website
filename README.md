@@ -1,29 +1,76 @@
-# Alvestrasza Corporation Static Website
+<!--
+File Name     : README.md
+Version       : v0.1.0
+Created       : 2026-06-17
+Last Modified : 2026-06-17
+Author        : Nouramon Alvestrasza
+Organization  : Alvestrasza Corporation
+Description   : Project overview and deployment notes for the public A-Corp website.
+-->
 
-Static under-construction website for `alvestrasza.com` and `www.alvestrasza.com`.
+# A-Corp Website
 
-## Contents
+Public website for Alvestrasza Corporation.
 
-```text
-index.html
-style.css
-assets/alvestrasza-logo.png
+## Pages
+
+- `/` – Start page
+- `/contact` – Company and mail operations contact page
+- `/it-service` – Initial IT Service focus page
+
+## Corporate Design
+
+```json
+{
+  "colors": {
+    "deepspace": "#071018",
+    "void": "#04090e",
+    "panel_blue": "#0b1721",
+    "text_white": "#f1f4f5",
+    "silver": "#c5cdd0",
+    "crimson": "#d4483e"
+  },
+  "fonts": {
+    "headline": "Cinzel (OFL replacement for Trajanor-style headings)",
+    "body": "Inter (OFL)"
+  }
+}
 ```
 
-## Deployment
+## Font Decision
 
-Upload all files to the web root of the Linux web server, for example:
+- Inter is used for body text.
+- Cinzel is used as a free, open-source Roman inscription style headline font.
+- Trajanor was not included because its commercial/licensing status should be verified before use.
+- No font files are shipped in this package. Fonts are loaded through `next/font/google` during build.
+
+## Installation
 
 ```bash
-sudo mkdir -p /var/www/alvestrasza.com
-sudo rsync -av ./ /var/www/alvestrasza.com/
-sudo chown -R www-data:www-data /var/www/alvestrasza.com
-sudo find /var/www/alvestrasza.com -type d -exec chmod 755 {} \;
-sudo find /var/www/alvestrasza.com -type f -exec chmod 644 {} \;
+npm install
+npm run dev
 ```
 
-For nginx, point the site root to:
+## Production Build
+
+```bash
+npm run build
+npm run start
+```
+
+## Suggested Linux Deployment Path
 
 ```text
-/var/www/alvestrasza.com
+/opt/sites/acorp-website/app
 ```
+
+## Notes
+
+The contact page is suitable for publication under both:
+
+```text
+https://alvestrasza.com/contact
+https://mail.alvestrasza.com/contact
+```
+
+The mail hostname can continue to serve Exchange services; only `/contact` needs to be routed to this website if required by the reverse proxy or load balancer.
