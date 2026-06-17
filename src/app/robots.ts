@@ -8,13 +8,12 @@ Organization  : Alvestrasza Corporation
 Description   : Robots metadata endpoint for the public A-Corp website.
 */
 
+import { siteConfig } from '@/lib/site-config';
 import type { MetadataRoute } from 'next';
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://alvestrasza.com';
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [{ userAgent: '*', allow: '/' }],
-    sitemap: `${siteUrl}/sitemap.xml`
+    sitemap: `${siteConfig.siteUrl}/sitemap.xml`
   };
 }

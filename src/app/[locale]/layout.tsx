@@ -14,6 +14,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
+import { siteConfig } from '@/lib/site-config';
 import MainNavigation from '@/components/MainNavigation';
 import type { Metadata } from 'next';
 import Image from 'next/image';
@@ -45,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       template: `%s | ${t('title')}`
     },
     description: t('description'),
-    metadataBase: new URL('https://www.alvestrasza.com'),
+    metadataBase: new URL(siteConfig.siteUrl),
     alternates: {
       canonical: `/${locale}`,
       languages: {
@@ -56,8 +57,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: `https://alvestrasza.com/${locale}`,
-      siteName: 'Alvestrasza Corporation',
+      url: `${siteConfig.siteUrl}/${locale}`,
+      siteName: siteConfig.companyName,
       images: ['/assets/alvestrasza-emblem-transparent.png'],
       type: 'website',
       locale: locale === 'de' ? 'de_DE' : 'en_US'
@@ -83,10 +84,10 @@ export default async function LocaleLayout({ children, params }: Props) {
           <div className="site-shell">
             <header className="header">
               <div className="header-inner">
-                <Link href="/" locale={locale} className="brand" aria-label={t('homeAriaLabel')}>
+                <Link href="/" locale={locale} className="brand" aria-label={t('homeAriaLabel', { companyName: siteConfig.companyName })}>
                   <Image
                     src="/assets/alvestrasza-emblem-transparent.png"
-                    alt={t('logoAlt')}
+                    alt={t('logoAlt', { companyName: siteConfig.companyName })}
                     width={80}
                     height={80}
                     className="brand-logo"
@@ -138,9 +139,9 @@ export default async function LocaleLayout({ children, params }: Props) {
 
             <footer className="footer">
               <div className="container footer-inner">
-                <span>© {new Date().getFullYear()} Alvestrasza Corporation</span>
+                <span>© {new Date().getFullYear()} {siteConfig.companyName}</span>
                 <span>
-                  {t('postmaster')}: <a href="mailto:postmaster@alvestrasza.com">postmaster@alvestrasza.com</a>
+                  {t('postmaster')}: <a href={`mailto:${siteConfig.mail.postmaster}`}>{siteConfig.mail.postmaster}</a>
                 </span>
               </div>
             </footer>

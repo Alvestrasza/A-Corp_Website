@@ -8,8 +8,9 @@ Organization  : Alvestrasza Corporation
 Description   : Locale-aware public contact page, including mail operations and postmaster information.
 */
 
-import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { siteConfig, hasPostalAddress } from '@/lib/site-config';
+import type { Metadata } from 'next';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -37,7 +38,12 @@ export default async function ContactPage({ params }: Props) {
         <div className="container narrow">
           <div className="eyebrow">{t('eyebrow')}</div>
           <h1>{t('title')}</h1>
-          <p className="lead">{t('lead')}</p>
+          <p className="lead">
+            {t('lead', {
+              companyName: siteConfig.companyName,
+              mailHost: siteConfig.mail.host
+            })}
+          </p>
         </div>
       </section>
 
@@ -48,20 +54,44 @@ export default async function ContactPage({ params }: Props) {
             <div className="info-list">
               <div className="info-row">
                 <span className="info-label">{t('company.organization')}</span>
-                <span className="info-value">Alvestrasza Corporation</span>
+                <span className="info-value">{siteConfig.companyName}</span>
               </div>
               <div className="info-row">
                 <span className="info-label">{t('company.responsiblePerson')}</span>
-                <span className="info-value">Nouramon Alvestrasza</span>
+                <span className="info-value">{siteConfig.responsiblePerson}</span>
               </div>
               <div className="info-row">
                 <span className="info-label">{t('company.role')}</span>
-                <span className="info-value">Chief Executive Officer</span>
+                <span className="info-value">{siteConfig.responsibleRole}</span>
               </div>
               <div className="info-row">
                 <span className="info-label">{t('company.website')}</span>
                 <span className="info-value">
-                  <a href="https://alvestrasza.com">https://alvestrasza.com</a>
+                  <a href={siteConfig.siteUrl}>{siteConfig.siteUrl}</a>
+                  {hasPostalAddress() && (
+                    <div className="info-row">
+                      <span className="info-label">{t('company.address')}</span>
+                      <span className="info-value">
+                        {siteConfig.address.name && (
+                          <>
+                            {siteConfig.address.name}
+                            <br />
+                          </>
+                        )}
+                        {siteConfig.address.street} {siteConfig.address.houseNumber}
+                        <br />
+                        {siteConfig.address.postalCode} {siteConfig.address.city}
+                        {siteConfig.address.state && (
+                          <>
+                            <br />
+                            {siteConfig.address.state}
+                          </>
+                        )}
+                        <br />
+                        {siteConfig.address.country}
+                      </span>
+                    </div>
+                  )}
                 </span>
               </div>
             </div>
@@ -75,24 +105,24 @@ export default async function ContactPage({ params }: Props) {
             <div className="info-list">
               <div className="info-row">
                 <span className="info-label">{t('mail.hostname')}</span>
-                <span className="info-value">mail.alvestrasza.com</span>
+                <span className="info-value">{siteConfig.mail.host}</span>
               </div>
               <div className="info-row">
                 <span className="info-label">{t('mail.postmaster')}</span>
                 <span className="info-value">
-                  <a href="mailto:postmaster@alvestrasza.com">postmaster@alvestrasza.com</a>
+                  <a href={`mailto:${siteConfig.mail.postmaster}`}>{siteConfig.mail.postmaster}</a>
                 </span>
               </div>
               <div className="info-row">
                 <span className="info-label">{t('mail.abuse')}</span>
                 <span className="info-value">
-                  <a href="mailto:abuse@alvestrasza.com">abuse@alvestrasza.com</a>
+                  <a href={`mailto:${siteConfig.mail.abuse}`}>{siteConfig.mail.abuse}</a>
                 </span>
               </div>
               <div className="info-row">
                 <span className="info-label">{t('mail.hostmaster')}</span>
                 <span className="info-value">
-                  <a href="mailto:hostmaster@alvestrasza.com">hostmaster@alvestrasza.com</a>
+                  <a href={`mailto:${siteConfig.mail.hostmaster}`}>{siteConfig.mail.hostmaster}</a>
                 </span>
               </div>
             </div>
@@ -106,7 +136,7 @@ export default async function ContactPage({ params }: Props) {
             <div className="eyebrow">{t('statement.eyebrow')}</div>
             <h2>{t('statement.title')}</h2>
             <p>{t('statement.text1')}</p>
-            <p>{t('statement.text2')}</p>
+            <p>{t('statement.text2', { mailHost: siteConfig.mail.host })}</p>
             <p>{t('statement.text3')}</p>
           </div>
         </div>

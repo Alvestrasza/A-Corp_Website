@@ -4,8 +4,8 @@
     "description": "Alvestrasza Corporation provides IT services and prepares structured technical education."
   },
   "Layout": {
-    "homeAriaLabel": "Alvestrasza Corporation home",
-    "logoAlt": "Alvestrasza Corporation logo",
+    "homeAriaLabel": "{companyName} home",
+    "logoAlt": "{companyName} logo",
     "mainNavigation": "Main navigation",
     "languageSwitch": "Language selection",
     "postmaster": "Postmaster",
@@ -70,13 +70,14 @@
     },
     "eyebrow": "Contact",
     "title": "Responsible contact information.",
-    "lead": "Public contact information for Alvestrasza Corporation, including responsible mail operations.",
+    "lead": "Public contact information for {companyName}, including responsible mail operations under {mailHost}.",
     "company": {
       "title": "Company",
       "organization": "Organization",
       "responsiblePerson": "Responsible person",
       "role": "Role",
       "website": "Website",
+      "address": "Address",
       "statusNote": "The company is currently in the process of being formally established. A full postal business address will be published once finalized."
     },
     "mail": {

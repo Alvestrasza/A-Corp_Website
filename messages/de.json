@@ -4,8 +4,8 @@
     "description": "Alvestrasza Corporation bietet IT-Services und bereitet strukturierte technische Weiterbildung vor."
   },
   "Layout": {
-    "homeAriaLabel": "Alvestrasza Corporation Startseite",
-    "logoAlt": "Logo der Alvestrasza Corporation",
+    "homeAriaLabel": "{companyName} Startseite",
+    "logoAlt": "Logo der {companyName}",
     "mainNavigation": "Hauptnavigation",
     "languageSwitch": "Sprachauswahl",
     "postmaster": "Postmaster",
@@ -70,13 +70,14 @@
     },
     "eyebrow": "Kontakt",
     "title": "Verantwortliche Kontaktinformationen.",
-    "lead": "Öffentliche Kontaktinformationen der Alvestrasza Corporation, einschließlich Angaben zum verantwortlichen Mailbetrieb.",
+    "lead": "Öffentliche Kontaktinformationen der {companyName}, einschließlich Angaben zum verantwortlichen Mailbetrieb unter {mailHost}.",
     "company": {
       "title": "Unternehmen",
       "organization": "Organisation",
       "responsiblePerson": "Verantwortliche Person",
       "role": "Rolle",
       "website": "Website",
+      "address": "Adresse",
       "statusNote": "Das Unternehmen befindet sich derzeit im formalen Aufbau. Eine vollständige postalische Geschäftsadresse wird veröffentlicht, sobald sie final feststeht."
     },
     "mail": {
@@ -90,7 +91,7 @@
       "eyebrow": "Betriebserklärung",
       "title": "Legitime geschäftliche und transaktionale E-Mails.",
       "text1": "Das Mailsystem ist für legitime geschäftliche Kommunikation, transaktionale Service-E-Mails, Account-Verifizierung, Benachrichtigungen und administrative Kommunikation vorgesehen.",
-      "text2": "Das System wird nicht als offenes Relay betrieben. Mailrouting, Senderautorisierung und Reverse-DNS-Informationen werden über öffentliche DNS-Einträge gepflegt.",
+      "text2": "Das System wird nicht als offenes Relay betrieben. Der verantwortliche Mail-Hostname ist {mailHost}. Mailrouting, Senderautorisierung und Reverse-DNS-Informationen werden über öffentliche DNS-Einträge gepflegt.",
       "text3": "Newsletter oder Massenmails werden nur nach ausdrücklichem Opt-in des Empfängers versendet. Gekaufte, gesammelte oder fremde Adresslisten werden nicht verwendet."
     }
   },
