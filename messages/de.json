@@ -20,8 +20,7 @@
   "HomePage": {
     "hero": {
       "emblemAlt": "Emblem der Alvestrasza Corporation",
-      "mission": "Alvestrasza Corporation bietet IT-Services und bereitet strukturierte technische Weiterbildung für sichere, wartbare Infrastruktur vor.",
-      "cta": "IT-Service ansehen"
+      "mission": "Alvestrasza Corporation bietet IT-Services und bereitet strukturierte technische Weiterbildung für sichere, wartbare Infrastruktur vor."
     },
     "pillarsTitle": "Unsere Schwerpunkte",
     "pillars": {
@@ -103,7 +102,6 @@
     "eyebrow": "IT-Service",
     "title": "IT-Service",
     "lead": "Ein Servicebereich für zuverlässigen Infrastrukturbetrieb, sichere Identity-Integration, technische Dokumentation und operative Befähigung.",
-    "cta": "Kontakt aufnehmen",
     "cardText": "Servicedetails werden vorbereitet und veröffentlicht, sobald das Betriebsmodell weiter ausgereift ist.",
     "areas": {
       "infrastructure": "Infrastrukturbetrieb",

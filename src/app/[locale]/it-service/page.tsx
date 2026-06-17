@@ -48,11 +48,6 @@ export default async function ItServicePage({ params }: Props) {
           <div className="eyebrow">{t('eyebrow')}</div>
           <h1>{t('title')}</h1>
           <p className="lead">{t('lead')}</p>
-          <div className="actions centered-actions">
-            <Link className="mission-button compact-button" href="/contact" locale={locale}>
-              {t('cta')} <span aria-hidden="true">›</span>
-            </Link>
-          </div>
         </div>
       </section>
 

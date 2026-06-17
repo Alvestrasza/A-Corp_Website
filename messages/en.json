@@ -20,8 +20,7 @@
   "HomePage": {
     "hero": {
       "emblemAlt": "Alvestrasza Corporation emblem",
-      "mission": "Alvestrasza Corporation provides IT services and prepares structured technical education for secure, maintainable infrastructure.",
-      "cta": "View IT Service"
+      "mission": "Alvestrasza Corporation provides IT services and prepares structured technical education for secure, maintainable infrastructure."
     },
     "pillarsTitle": "Our Focus Areas",
     "pillars": {
@@ -103,7 +102,6 @@
     "eyebrow": "IT Service",
     "title": "IT Service",
     "lead": "A service area for reliable infrastructure operations, secure identity integration, technical documentation and operational enablement.",
-    "cta": "Contact us",
     "cardText": "Service details are being prepared and will be published as the operating model matures.",
     "areas": {
       "infrastructure": "Infrastructure operations",

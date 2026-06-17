@@ -10,7 +10,6 @@ Description   : Locale-aware public homepage for the Alvestrasza Corporation web
 
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Link } from '@/i18n/navigation';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -69,10 +68,6 @@ export default async function HomePage({ params }: Props) {
           </h1>
           <span className="red-rule" aria-hidden="true" />
           <p>{t('hero.mission')}</p>
-          <Link className="mission-button" href="/it-service" locale={locale}>
-            {t('hero.cta')}
-            <span aria-hidden="true">›</span>
-          </Link>
         </div>
       </section>
 
