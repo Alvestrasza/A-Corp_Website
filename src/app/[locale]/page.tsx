@@ -66,7 +66,6 @@ export default async function HomePage({ params }: Props) {
             <span className="hero-wordmark-main">Alvestrasza</span>
             <span className="hero-wordmark-subtitle">Corporation</span>
           </h1>
-          <span className="red-rule" aria-hidden="true" />
           <p>{t('hero.mission')}</p>
         </div>
       </section>

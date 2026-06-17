@@ -8,14 +8,15 @@ Organization  : Alvestrasza Corporation
 Description   : Locale-aware application layout, metadata, fonts, header and footer.
 */
 
-import type { Metadata } from 'next';
-import Image from 'next/image';
 import { Cinzel, Inter } from 'next/font/google';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
+import MainNavigation from '@/components/MainNavigation';
+import type { Metadata } from 'next';
+import Image from 'next/image';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-body', display: 'swap' });
 const cinzel = Cinzel({ subsets: ['latin'], variable: '--font-headline', display: 'swap' });
@@ -97,14 +98,17 @@ export default async function LocaleLayout({ children, params }: Props) {
                   </span>
                 </Link>
 
-                <nav className="nav" aria-label={t('mainNavigation')}>
-                  <Link href="/" locale={locale}>{t('nav.overview')}</Link>
-                  <Link href="/it-service" locale={locale}>{t('nav.itService')}</Link>
-                  <Link href="/#initiatives" locale={locale}>{t('nav.focus')}</Link>
-                  <Link href="/#insights" locale={locale}>{t('nav.documentation')}</Link>
-                  <Link href="/contact" locale={locale}>{t('nav.contact')}</Link>
-                  <span className="nav-accent" aria-hidden="true" />
-                </nav>
+                <MainNavigation
+                  locale={locale}
+                  ariaLabel={t('mainNavigation')}
+                  items={[
+                    { label: t('nav.overview'), href: '/' },
+                    { label: t('nav.itService'), href: '/it-service' },
+                    { label: t('nav.focus'), href: '/#initiatives' },
+                    { label: t('nav.documentation'), href: '/#insights' },
+                    { label: t('nav.contact'), href: '/contact' }
+                  ]}
+                />
 
                 <div className="language-switcher" aria-label={t('languageSwitch')}>
                   <Link

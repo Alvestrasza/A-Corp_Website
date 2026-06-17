@@ -133,30 +133,45 @@ img { max-width: 100%; height: auto; }
 .brand-subtitle::after { right: 0; }
 
 .nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: 7.2rem 7.6rem 9.6rem 10.4rem 7.2rem;
+  column-gap: clamp(12px, 2vw, 30px);
   align-items: center;
-  justify-content: flex-end;
-  gap: clamp(18px, 3.2vw, 54px);
+  justify-content: end;
   color: var(--color-text-white);
   font-size: 0.76rem;
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
-.nav a {
+
+.nav-link {
+  display: inline-flex;
+  justify-content: flex-start;
+  width: 100%;
   padding: 12px 0;
-  border-bottom: 2px solid transparent;
-  opacity: 0.9;
+  opacity: 0.86;
 }
-.nav a:hover,
-.nav a:focus-visible {
-  border-color: var(--color-crimson);
+
+.nav-link-label {
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
+  transition:
+    border-color 180ms ease,
+    opacity 180ms ease,
+    color 180ms ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible,
+.nav-link.active {
   opacity: 1;
 }
-.nav-accent {
-  width: 32px;
-  height: 2px;
-  background: var(--color-crimson);
-  display: inline-block;
+
+.nav-link:hover .nav-link-label,
+.nav-link:focus-visible .nav-link-label,
+.nav-link.active .nav-link-label {
+  border-color: var(--color-crimson);
 }
 
 .language-switcher {
