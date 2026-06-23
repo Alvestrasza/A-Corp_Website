@@ -85,7 +85,8 @@
       "hostname": "Mail-Hostname",
       "postmaster": "Postmaster",
       "abuse": "Abuse-Kontakt",
-      "hostmaster": "Hostmaster"
+      "hostmaster": "Hostmaster",
+      "emergency": "Notfallkontakt"
     },
     "statement": {
       "eyebrow": "Betriebserklärung",

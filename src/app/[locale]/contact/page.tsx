@@ -68,30 +68,28 @@ export default async function ContactPage({ params }: Props) {
                 <span className="info-label">{t('company.website')}</span>
                 <span className="info-value">
                   <a href={siteConfig.siteUrl}>{siteConfig.siteUrl}</a>
-                  {hasPostalAddress() && (
-                    <div className="info-row">
-                      <span className="info-label">{t('company.address')}</span>
-                      <span className="info-value">
-                        {siteConfig.address.name && (
-                          <>
-                            {siteConfig.address.name}
-                            <br />
-                          </>
-                        )}
-                        {siteConfig.address.street} {siteConfig.address.houseNumber}
-                        <br />
-                        {siteConfig.address.postalCode} {siteConfig.address.city}
-                        {siteConfig.address.state && (
-                          <>
-                            <br />
-                            {siteConfig.address.state}
-                          </>
-                        )}
-                        <br />
-                        {siteConfig.address.country}
-                      </span>
-                    </div>
+                </span>
+              </div>              
+              <div className="info-row">
+                <span className="info-label">{t('company.address')}</span>
+                <span className="info-value">
+                  {siteConfig.address.name && (
+                  <>
+                    {siteConfig.address.name}
+                    <br />
+                  </>
                   )}
+                  {siteConfig.address.street} {siteConfig.address.houseNumber}
+                  <br />
+                  {siteConfig.address.postalCode} {siteConfig.address.city}
+                  {siteConfig.address.state && (
+                  <>
+                    <br />
+                    {siteConfig.address.state}
+                  </>
+                  )}
+                  <br />
+                  {siteConfig.address.country}
                 </span>
               </div>
             </div>
@@ -123,6 +121,12 @@ export default async function ContactPage({ params }: Props) {
                 <span className="info-label">{t('mail.hostmaster')}</span>
                 <span className="info-value">
                   <a href={`mailto:${siteConfig.mail.hostmaster}`}>{siteConfig.mail.hostmaster}</a>
+                </span>
+              </div>
+              <div className="info-row">
+                <span className="info-label">{t('mail.emergency')}</span>
+                <span className="info-value">
+                  <a href={`mailto:${siteConfig.mail.emergency}`}>{siteConfig.mail.emergency}</a>
                 </span>
               </div>
             </div>

@@ -28,7 +28,8 @@ export const siteConfig = {
     host: readEnv('ACORP_MAIL_HOST', 'mail.alvestrasza.com'),
     postmaster: readEnv('ACORP_POSTMASTER_EMAIL', 'postmaster@alvestrasza.com'),
     abuse: readEnv('ACORP_ABUSE_EMAIL', 'abuse@alvestrasza.com'),
-    hostmaster: readEnv('ACORP_HOSTMASTER_EMAIL', 'hostmaster@alvestrasza.com')
+    hostmaster: readEnv('ACORP_HOSTMASTER_EMAIL', 'hostmaster@alvestrasza.com'),
+    emergency: readEnv('ACORP_EMERGENCY_EMAIL','alvestrasza@proton.me')
   },
 
   address: {
